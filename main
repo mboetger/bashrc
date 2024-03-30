@@ -1,0 +1,40 @@
+# If not running interactively, don't do anything
+case $- in
+   *i*) ;;
+    *) return;;
+esac
+
+# Aliases
+alias q='exit'
+alias c='clear'
+alias h='history'
+alias cs='clear;ls'
+alias p='cat'
+alias pd='pwd'
+alias lsa='ls -a'
+alias lsl='ls -l'
+
+# Directory navigation aliases
+alias home='cd ~'
+alias root='cd /'
+
+# Git shortcuts
+alias g='git'
+alias st='git status'
+alias com='git commit -m'
+alias clone='git clone'
+alias sth='git stash'
+alias lg='git log'
+alias u='git add -u'
+alias all='git add .'
+
+# Prompt customization
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# Other settings
+export EDITOR=nvim
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/usr/bin/flutter/bin"
+
+alias v='neovim'
+alias s='source $(ls ~/src/bashrc/** | fzf --height=10 --query=$1 --filepath-word --preview="batcat {-1}")'
