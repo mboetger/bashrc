@@ -36,5 +36,5 @@ export EDITOR=nvim
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/usr/bin/flutter/bin"
 
-alias v='neovim'
+alias v='nvim'
 alias s='source $(ls ~/src/bashrc/** | fzf --height=10 --query=$1 --filepath-word --preview="batcat {-1}")'
